@@ -1,9 +1,10 @@
 #include "main.h"
-
 /**
  * _memset - Entry point
+ *
  * Return: Always 0 (Success)
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
