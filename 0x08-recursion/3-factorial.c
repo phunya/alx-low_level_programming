@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- * 
  * @n: input
  * Return: Always 0 (Success)
  */
