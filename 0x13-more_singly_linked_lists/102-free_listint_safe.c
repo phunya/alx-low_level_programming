@@ -4,7 +4,7 @@
  * loop__checker_listint - check if there is loop in a linked list and
  *            counts the number of unique nodes in a looped linked list
  *
- * @head: A pointer to the head of the listint_t to check.
+ * @head: A pointer to the head of the listint_t to check. test
  *
  * Return: 0 - if the list is not looped,
  *         Otherwise - the number of unique nodes in the list.
