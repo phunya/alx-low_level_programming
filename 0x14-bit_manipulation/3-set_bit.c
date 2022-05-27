@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * set_bit - Entry Point
  * @n: input
