@@ -1,28 +1,49 @@
-#include "main.h"
+#include "holberton.h"
+#include <stdio.h>
 /**
- * print_number - prints an integer.
- * @n: integer
- * Return: void
+ * print_number - Print an integer using only _putchar
+ * @n: integer to print
  */
 
 void print_number(int n)
 {
-int divisor = 1, i, resp;
+	int power;
+	int neg;
+	int hold;
 
-if (n < 0)
-{
-	_putchar('-');
-	n *= -1;
-}
+	neg = 0;
+	power = 1;
+	hold = n;
+	if (n < 0)
+	{
+		_putchar('-');
+		neg = 1;
+	}
 
-for (i = 0; n / divisor > 9; i++, divisor *= 10)
-;
+	while (hold > 9 || hold < -9)
+	{
+		power *= 10;
+		hold /= 10;
+	}
 
-for (; divisor >= 1; n %= divisor, divisor /= 10)
-{
-	resp = n / divisor;
-	_putchar('0' + resp);
+	while (power > 0)
+	{
+		if (power > 9)
+		{
+			if (!neg)
+				_putchar((n / power % 10) + '0');
+			else
+				_putchar((n / power % 10) * -1 + '0');
 
-}
-
+			power /= 10;
+		}
+		if (power == 1)
+		{
+			if (neg)
+				_putchar((n % 10) * -1 + '0');
+			else
+				_putchar(n % 10 + '0');
+			power = 0;
+		}
+	}
 }
